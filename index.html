@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Introduction to Local Storage</h1>
+    </div>
+
+    <!--Javascript code here-->
+    <script>
+      //Object
+      const sampleData = {
+        name: "Adnan Kabir Akon",
+        age: 25,
+        job: "Computer Engineer",
+      }
+
+      //Convert this object into JSON String
+      const sampleDataJson = JSON.stringify(sampleData)
+      //set data to localStorage
+      localStorage.setItem('id-1',sampleDataJson)
+      
+      //get data from localStorage (will get data as JSON string)
+      const dataJSON = localStorage.getItem('id-1')
+      //convert this data into Object
+      const dataObject = JSON.parse(dataJSON)
+      console.log(dataObject)
+    </script>
+  </body>
+</html>
